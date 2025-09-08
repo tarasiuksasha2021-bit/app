@@ -1,112 +1,128 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Замовлення продукту</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        header, footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-        main {
-            max-width: 600px;
-            margin: 2em auto;
-            padding: 2em;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 1em;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-bottom: 0.5em;
-            font-weight: bold;
-        }
-        input, select {
-            margin-bottom: 1em;
-            padding: 0.5em;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="checkbox"] {
-            margin-right: 0.5em;
-        }
-        button {
-            padding: 0.7em;
-            font-size: 1em;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Опитування</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    .radio-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+    }
+    .radio-group input {
+      width: auto;
+    }
+  </style>
 </head>
 <body>
-    <header>
-    <h2>Него Block</h2>
-</header>
 
-<main>
-    <h1>Замовлення продукту</h1>
+  <!-- Hero Block -->
+  <header>
+    <h1>Опитування</h1>
+  </header>
+
+  <!-- Main Form Section -->
+  <main>
     <form action="#" method="post">
-        <label for="name">Ім'я:</label>
-        <input type="text" id="name" name="name" required>
+      
+      <!-- Ім'я -->
+      <label for="name">Ім'я:</label>
+      <input type="text" id="name" name="name" required>
 
-        <label for="email">Електронна пошта:</label>
-        <input type="email" id="email" name="email" required>
+      <!-- Електронна пошта -->
+      <label for="email">Електронна пошта:</label>
+      <input type="email" id="email" name="email" required>
 
-        <label for="address">Адреса доставки:</label>
-        <input type="text" id="address" name="address" required>
+      <!-- Вікова група -->
+      <label for="age">Вікова група:</label>
+      <select id="age" name="age" required>
+        <option value="">Оберіть вікову групу</option>
+        <option value="18-25">18-25</option>
+        <option value="26-35">26-35</option>
+        <option value="36-45">36-45</option>
+        <option value="46-60">46-60</option>
+        <option value="60+">60+</option>
+      </select>
 
-        <label for="phone">Номер телефону:</label>
-        <input type="tel" id="phone" name="phone" required>
+      <!-- Стать -->
+      <label>Стать:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Чоловік" required> Чоловік</label>
+        <label><input type="radio" name="gender" value="Жінка"> Жінка</label>
+      </div>
 
-        <label for="delivery">Спосіб доставки:</label>
-        <select id="delivery" name="delivery" required>
-            <option value="">Виберіть спосіб доставки</option>
-            <option value="courier">Кур'єр</option>
-            <option value="post">Пошта</option>
-            <option value="pickup">Самовивіз</option>
-        </select>
+      <!-- Коментарі -->
+      <label for="comments">Коментарі або відгуки:</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Ваші думки..."></textarea>
 
-        <label for="quantity">Кількість товарів:</label>
-        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+      <!-- Згода на участь у подальших опитуваннях -->
+      <label>
+        <input type="checkbox" name="consent" value="yes">
+        Даю згоду на участь у подальших опитуваннях
+      </label>
 
-        <label for="promo">Промокод (якщо є):</label>
-        <input type="text" id="promo" name="promo">
+      <!-- Дата участі -->
+      <label for="date">Дата участі:</label>
+      <input type="date" id="date" name="date" required>
 
-        <label>
-            <input type="checkbox" name="terms" required>
-            Я згоден(на) з умовами обслуговування
-        </label>
+      <!-- Кнопка відправки -->
+      <button type="submit">Надіслати опитування</button>
 
-        <button type="submit">Оформити замовлення</button>
     </form>
-</main>
+  </main>
 
-<footer>
-    <p>© 2025 Ваш магазин. Всі права захищені.</p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Опитування. Усі права захищено.
+  </footer>
 
 </body>
 </html>
