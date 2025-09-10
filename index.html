@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Меню Ресторану</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    th, td {
+      border: 1px solid #999;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .section {
+      background-color: #ddd;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .special {
+      background-color: #ffeeba;
+      font-weight: bold;
+    }
+
+    .note {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .veg {
+      color: green;
+      font-weight: bold;
+    }
+
+    .allergen {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Меню Ресторану</h1>
+
+  <table>
+    <!-- Заголовки -->
+    <tr>
+      <th>Назва страви</th>
+      <th>Опис</th>
+      <th>Ціна</th>
+    </tr>
+
+    <!-- Сніданок -->
+    <tr>
+      <td class="section" colspan="3">Сніданок</td>
+    </tr>
+    <tr>
+      <td>Омлет з овочами <span class="veg">(V)</span></td>
+      <td>Яйця, болгарський перець, помідори, шпинат</td>
+      <td>85 грн</td>
+    </tr>
+    <tr class="special">
+      <td>Млинці з сиром</td>
+      <td>Домашній сир, сметана<br><span class="allergen">Містить: молочні продукти</span></td>
+      <td>75 грн</td>
+    </tr>
+
+    <!-- Обід -->
+    <tr>
+      <td class="section" colspan="3">Обід</td>
+    </tr>
+    <tr>
+      <td>Борщ український</td>
+      <td>Традиційний червоний борщ зі сметаною</td>
+      <td>95 грн</td>
+    </tr>
+    <tr>
+      <td>Котлета по-київськи</td>
+      <td>Куряче філе з вершковим маслом, подається з пюре<br><span class="allergen">Містить: глютен</span></td>
+      <td>135 грн</td>
+    </tr>
+    <tr class="special">
+      <td>Салат "Фітнес" <span class="veg">(V)</span></td>
+      <td>Листя салату, авокадо, огірки, насіння</td>
+      <td>90 грн</td>
+    </tr>
+
+    <!-- Вечеря -->
+    <tr>
+      <td class="section" colspan="3">Вечеря</td>
+    </tr>
+    <tr>
+      <td>Різотто з грибами <span class="veg">(V)</span></td>
+      <td>Італійський рис з білими грибами та пармезаном<br><span class="allergen">Містить: молочні продукти</span></td>
+      <td>120 грн</td>
+    </tr>
+    <tr>
+      <td>Філе лосося</td>
+      <td>Запечене з лимонним соусом, овочевий гарнір</td>
+      <td>170 грн</td>
+    </tr>
+  </table>
+
+  <!-- Примітки -->
+  <p class="note"><strong>Примітки:</strong> <span class="veg">(V)</span> — Вегетаріанська страва. <span class="allergen">Містить</span> — можливі алергени.</p>
+</body>
+</html>
